@@ -127,3 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#other stuff to ignore
+pickle
+
+.idea
+.ipynb_checkpoints
+.DS_Store
+__pycache__
+*.db
+*.pytest_cache
+.gitattributes
+ .ipynb_checkpoints/Juypter Notebook-checkpoint.ipynb
