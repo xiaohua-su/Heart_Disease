@@ -15,7 +15,7 @@ Our model aims to predict whether a patient, who comes into a doctor’s office/
 
 # Data and Methodology
 
-The data was taken from the [CDC's 2020 Behavorial Risk Factor Surveillance System](https://www.cdc.gov/brfss/annual_data/annual_2020.html) (BRFSS). A new column `heart_disease` was created that classifed whether someone had heart disease if they either had a cornary heart disease or had a heart attack. Our model does not take `race` or `gender` into account as to exculde such biases. 
+The data was taken from the [CDC's 2020 Behavorial Risk Factor Surveillance System](https://www.cdc.gov/brfss/annual_data/annual_2020.html) (BRFSS). The data contains information of the individual such as `race` and `gender` that we will not use to avoid these biases in our models. A new column was created as the data does not specifically have a column called heart disease but instead has two two columns called `cvdinfr4` and `cvdcrhd4` that corresponded with whether the individual was ever told/diagnose with having a heart attack and told that they had coronary heart disease. Both questions, get at the issue of heart disease.
 
 
 # Results
