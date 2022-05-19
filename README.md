@@ -29,6 +29,9 @@ To Be determine if I do this
 
 # Next Steps
 
+- figuring out a way to incorporate all of the other types of heart conditions that fall under cardiovascular disease. This projects only looks at heart attack and CAD. While the true scale of the disease expands out to high blood pressure, congenitial heart disease etc.
+
+
 # Conclusion
 
 
