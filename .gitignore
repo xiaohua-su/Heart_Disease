@@ -140,5 +140,8 @@ __pycache__
 .gitattributes
  .ipynb_checkpoints/Juypter Notebook-checkpoint.ipynb
 
+#ignore model data file
+joblib_models
+
 #ignore the data file
 LLCP2020.XPT
