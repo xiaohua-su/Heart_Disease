@@ -70,7 +70,7 @@ class ModelWithCV():
 
     def print_summary(self):
         roc = plot_roc_curve(self.model, self.X , self.y);
-        cm = plot_confusion_matrix(self.model, self.X, self.y);
+        cm = plot_confusion_matrix(self.model, self.X, self.y, cmap=plt.cm.Blues);
         preds = self.model.predict(self.X)
         f1_ = f1_score(self.y, preds)
         cv_summary = (
@@ -78,4 +78,7 @@ class ModelWithCV():
             {self.cv_mean:.5f} ± {self.cv_std:.5f} accuracy
         ''')
 
-        print(f' \n  f1_score is {f1_}', cv_summary ,cm, roc)      
+        print(f' \n  f1_score is {f1_}', \
+              cv_summary ,\
+              cm, \
+              roc)
