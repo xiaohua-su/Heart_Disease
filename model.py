@@ -38,7 +38,7 @@ class ModelWithCV():
         cv_X = X if X else self.X
         cv_y = y if y else self.y
 
-        self.cv_results = cross_val_score(self.model, cv_X, cv_y, cv=kfolds, n_jobs = -2)
+        self.cv_results = cross_val_score(self.model, cv_X, cv_y, cv=3, n_jobs = -2)
         self.cv_mean = np.mean(self.cv_results)
         self.cv_median = np.median(self.cv_results)
         self.cv_std = np.std(self.cv_results)
