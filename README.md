@@ -4,7 +4,7 @@
 
 # Overview
 
-As of 2020, heart disease is the leading cause of death in the US, with the disease claiming close to 700,000 that year. It is the leading cause of death regardless of gender and for most race/ethnicity. This disease can lead to early death in individuals, increase medicial visits and a lost of productivity in our economy. As such, it is important to try to address this.
+As of 2020, heart disease is the leading cause of death in the US, with the disease claiming close to 700,000 that year. It is the leading cause of death regardless of gender and for most race/ethnicity. This disease can lead to early death in individuals, increase medicial visits and a lost of productivity in our economy. As such, it is important to try to address this. My project aims to help build a predictive model for heart disease. By being able to predict whether a patient has heart disease or not, this can be used in hospital to flag doctors to discuss way to manage this disease and prevent early death and potentially slow/mitigate the disease progression.
 
 
 # Business Problem
@@ -23,15 +23,15 @@ It is a survey data performed between 2020 to 2021 from the CDC to monitor peopl
 
 
 
-# App? 
-
-To Be determine if I do this
+# App
 
 # Next Steps
 
-- figuring out a way to incorporate all of the other types of heart conditions that fall under cardiovascular disease. This projects only looks at heart attack and CAD. While the true scale of the disease expands out to high blood pressure, congenitial heart disease etc.
+The next step for this project would be to further refine our target. This projects only looks at heart attack and Cornary Artery Disease. These two conditions are some of the conditions that fall under the heart disease. Heart disease encompasses other conditions such as high blood pressure, congenitial heart disease etc., it's not just CAD and heart attacks as such we would have to refine the questions being asked to individual. 
 
+Not only that but more time to refine our model. Due to computational limitation of my system and the computational time, I am not able to perform as much gridsearches to fine-tune the model even further. Not only that but we can refine our model on data from patients' information form and the diagnoses given by the doctor to help improve the flagging of indivduals with such a condition that way their primary doctor know to discuss this with the patient.
 
+Build a better app. The app created was for demonstrated purposes. 
 # Conclusion
 
 
