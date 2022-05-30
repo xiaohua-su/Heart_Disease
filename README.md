@@ -24,6 +24,7 @@ It is a survey data performed between 2020 to 2021 from the CDC to monitor peopl
 
 
 # App
+Our best model was deployed in an app. The function development in the app.py file can be found in the app development notebook. In addition, the code used to make the app on streamlit can be found in the app.py. Unfortunately, due to how big the model file is (2-4 Gb), I was unable to implement my model on the streamlit website, but managed to run it locally. As such, it is not available for others to use. In my GitHub, I have provided the streamlit environment in which I created it. This app can be run locally with the streamlit environment along with running the modeling notebook in order to get the model file into your local computer.
 
 # Next Steps
 
