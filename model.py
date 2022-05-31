@@ -38,7 +38,7 @@ class ModelWithCV():
         cv_X = X if X else self.X
         cv_y = y if y else self.y
 
-        self.cv_results = cross_val_score(self.model, cv_X, cv_y, cv=3)
+        self.cv_results = cross_val_score(self.model, cv_X, cv_y, cv=3, scoring='recall')
         self.cv_mean = np.mean(self.cv_results)
         self.cv_median = np.median(self.cv_results)
         self.cv_std = np.std(self.cv_results)
@@ -46,14 +46,11 @@ class ModelWithCV():
     def print_summary(self):
         roc = plot_roc_curve(self.model, self.X , self.y);
         cm = plot_confusion_matrix(self.model, self.X, self.y, cmap=plt.cm.Blues);
-        preds = self.model.predict(self.X)
-        recall_ = recall_score(self.y, preds)
+        # preds = self.model.predict(self.X)
+        # recall_ = recall_score(self.y, preds)
         cv_summary = (
             f'''CV Results for `{self.name}` model:
-            {self.cv_mean:.5f} ± {self.cv_std:.5f} accuracy
+            {self.cv_mean:.5f} ± {self.cv_std:.5f} recall
         ''')
 
-        print(f' \n  Recall is {recall_}', \
-              cv_summary ,\
-              cm, \
-              roc)
+        print(f' {cv_summary} ,\n \n {cm}, \n \n {roc}')
