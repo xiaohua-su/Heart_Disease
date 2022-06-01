@@ -65,7 +65,7 @@ last_checkup = st.selectbox("when was your last check up?",
 
 exercise = st.selectbox("Did you participate in any physical activities or exercise during the past month", options=['yes', 'no', 'not sure'])
 
-f = open('./joblib_models/knn2.sav', 'rb')
+f = open('./rf2.sav', 'rb')
 model = joblib.load(f)
 f.close()
 
@@ -136,7 +136,7 @@ def information_gather(diabetes,asthma,arthritis,smoke,stroke,general_health,
         return model.predict(df)[0]
 
 
-run = st.button("Results")
+run = st.button("click to run")
 
 if run:
     results = information_gather(diabetes,asthma,arthritis,smoke,stroke,general_health,
