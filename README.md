@@ -40,7 +40,7 @@ The recall of the KNN was 0.30 which also indicated that it's over fit as the tr
 
 
 # App
-Our best model was deployed in an app. The function development in the app.py file can be found in the app development notebook. In addition, the code used to make the app on streamlit can be found in the app.py. Unfortunately, due to how big the model file is (2-4 Gb), I was unable to implement my model on the streamlit website, but managed to run it locally. As such, it is not available for others to use. In my GitHub, I have provided the streamlit environment in which I created it. This app can be run locally with the streamlit environment along with running the modeling notebook in order to get the model file into your local computer.
+ Our best model was deployed in an app. The function development in the [app.py](./app.py) file can be found in the app development notebook. In addition, the code used to make the app on streamlit can be found in the app.py. Unfortunately, due to how big the model file is (2-4 Gb), I was unable to implement my model on the streamlit website, but managed to run it locally. As such, it is not available for others to use. In my GitHub, I have provided the streamlit environment in which I created it. This app can be run locally with the streamlit environment along with running the modeling notebook in order to get the model file into your local computer.
 
 # Next Steps
 
@@ -57,20 +57,35 @@ This model can be deployed in an app to be used in a hospital to flag a doctor o
 
 # Repository Structure
 ```
-├── Workspace  
 ├── Data
-├── images
-├── Heart_disease_EDA.ipynb
+├── Images
+├── Workspace
+│       ├── modeling_attempt
+│       └── nueral_network_attempt
+├── .gitignore
 ├── Heart_disease_Modeling.ipynb
+├── Heart_disease_EDA.ipynb
 ├── presentation.pdf
 ├── README.md
 ├── LICENSE
 ├── app.py
 ├── get_features.py
 ├── model.py
-├── enviroment.yml
-└── Navigation.md
+├── eda.yml
+└── modeling.yml
 ```
+# How to run the notebooks
+
+The [modeling.yml](./modeling.yml) file is the environment that was used when I was working on the [modeling notebook](./Heart_Disease_Modeling.ipynb),
+and streamlit local app.
+
+The [eda.yml](./eda.yml) file contains the environment that was used for the [EDA notebook](Heart_Disease_EDA.ipynb).
+
+
+<div class="alert alert-block alert-danger">
+<b>Danger:</b> In order to be able to run this notebook successfully, you must have at minimun 32 Gb of RAM or you run the risk of crashing your computer. This notebook was created on a i7-11800H cpu, and 32GB RAM laptop.
+</div>
+
 # Citations/References
 
 CDC. Heart Disease Facts. [Link](https://www.cdc.gov/heartdisease/facts.htm)
