@@ -1,4 +1,4 @@
-name: learn-env
+name: model_streamlit
 channels:
   - conda-forge
   - defaults
