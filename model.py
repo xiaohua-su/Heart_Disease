@@ -46,11 +46,11 @@ class ModelWithCV():
     def print_summary(self):
         roc = plot_roc_curve(self.model, self.X , self.y);
         cm = plot_confusion_matrix(self.model, self.X, self.y, cmap=plt.cm.Blues);
-        # preds = self.model.predict(self.X)
-        # recall_ = recall_score(self.y, preds)
+        preds = self.model.predict(self.X)
+        recall_ = recall_score(self.y, preds)
         cv_summary = (
             f'''CV Results for `{self.name}` model:
             {self.cv_mean:.5f} ± {self.cv_std:.5f} recall
         ''')
 
-        print(f' {cv_summary} ,\n \n {cm}, \n \n {roc}')
+        print(f' The recall on the training is {recall_} \n {cv_summary} \n \n {cm}, \n \n {roc}')
