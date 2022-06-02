@@ -71,16 +71,11 @@ This model can be deployed in an app to be used in a hospital to flag a doctor o
 ├── app.py
 ├── get_features.py
 ├── model.py
-├── eda.yml
-└── modeling.yml
+└── environment.yml
 ```
 # How to run the notebooks
 
-The [modeling.yml](./modeling.yml) file is the environment that was used when I was working on the [modeling notebook](./Heart_Disease_Modeling.ipynb),
-and streamlit local app.
-
-The [eda.yml](./eda.yml) file contains the environment that was used for the [EDA notebook](Heart_Disease_EDA.ipynb).
-
+The [environment.yml](./environment.yml) file is the environment that was used to run this notebook, [EDA notebook](Heart_Disease_EDA.ipynb) and the streamlit app. This notebook requires scipy version 1.5.3 in order to run. When you install the environment into your local, it is possible that scipy updates to a newer version due to streamlit/phik and will need to downgrade it in order for sklearn to operate properly. If you have a MAC unfortunately you'll need to figure out what MAC specific dependencies will be required.
 
 <div class="alert alert-block alert-danger">
 <b>Danger:</b> In order to be able to run this notebook successfully, you must have at minimun 32 Gb of RAM or you run the risk of crashing your computer. This notebook was created on a i7-11800H cpu, and 32GB RAM laptop.
@@ -88,10 +83,10 @@ The [eda.yml](./eda.yml) file contains the environment that was used for the [ED
 
 # Citations/References
 
-CDC. Heart Disease Facts. [Link](https://www.cdc.gov/heartdisease/facts.htm)
+CDC. "*Heart Disease Facts*". CDC. Feb 2022.[Link](https://www.cdc.gov/heartdisease/facts.htm)
 
-CDC. About Heart Disease. [Link](https://www.cdc.gov/heartdisease/about.htm)
+CDC. "*About Heart Disease*". CDC. Sept 2021. [Link](https://www.cdc.gov/heartdisease/about.htm)
 
-AHA. CDC Prevention Programs. [Link](https://www.heart.org/en/get-involved/advocate/federal-priorities/cdc-prevention-programs)
+AHA. "*CDC Prevention Programs*". AHA. May 2018. [Link](https://www.heart.org/en/get-involved/advocate/federal-priorities/cdc-prevention-programs)
 
 
