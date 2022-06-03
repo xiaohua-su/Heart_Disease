@@ -11,36 +11,43 @@ As of 2020, heart disease is the leading cause of death in the US, with the dise
 It is the leading cause of death regardless of gender and for most race/ethnicity.This disease can lead to early death in individuals, increase medicial visits and a lost of productivity in our economy. As such, it is important to try to address this. My project aims to help build a predictive model for heart disease. By being able to predict whether a patient has heart disease or not, this can be used in hospital to flag doctors to discuss way to manage this disease and prevent early death and potentially slow/mitigate the disease progression.
 
 
-# Business Problem
+# Problem
 
-With how prevalent heart disease is in the nation, it is important for doctors to discuss with their patients about early prevention. In order to do this, doctors would need to know more about a patient’s history in order to diagnose them with having heart disease, potentially requiring blood work in addition. Getting the results from the blood work usually happens after the patient’s is already out of the doctor’s office. Calls will then be made to discuss these results and potential follow up appointments will be made. 
+With how prevalent heart disease is in the nation, it is important for doctors to discuss with their patients about early prevention. 
+In order to do this, doctors would need to know more about a patient’s history in order to diagnose them with having heart disease, potentially requiring blood work and other lab work in addition. Getting the results from the blood work usually happens after the patient’s is already out of the doctor’s office. Calls will then be made to discuss these results and potential follow-up appointments will be made.
 
-Our model aims to predict whether a patient, who comes into a doctor’s office/hospital, has heart disease. By being able to predict if the patient has heart disease or not, we can then flag this patient for the doctor electronically. Instead of having to waiting for a phone call for a discussion on, that may not be between the patient and doctor, conversation between the doctor and patient about managing heart disease can begin. This flagging can help start the conversation between the doctor and patient about early prevention steps that can be made and can help lead the doctor in asking certain questions for further verification and testing.
+Our model aims to predict whether a patient, who comes into a doctor’s office/hospital, has heart disease. 
+By being able to predict if the patient has heart disease or not, we can then flag this patient for the doctor electronically. 
+Instead of having to waiting for a phone call for a discussion on, that may not be between the patient and doctor, conversation between the doctor and patient about managing heart disease can begin.
+This flagging can help start the conversation between the doctor and patient about early prevention steps that can be made and can help lead the doctor in asking certain questions for further verification and testing. 
+By diagnosing it earlier, you can help slow the disease progression, keeping them healthier longer.
 
 # Data
-The data was taken from the [CDC's 2020 Behavorial Risk Factor Surveillance System](https://www.cdc.gov/brfss/annual_data/annual_2020.html) (BRFSS). Due to how large the data is, this data was not uploaded to the GitHub but can be found where the data was taken underneath the data files section. The heart disease dataset was created from that 2020 survey and can be found in this repository's [data](https://github.com/xiaohua-su/Heart_Disease/tree/main/Data) folder.
+The data was taken from the [CDC's 2020 Behavorial Risk Factor Surveillance System](https://www.cdc.gov/brfss/annual_data/annual_2020.html) (BRFSS).Due to how large the data is, this data was not uploaded to the GitHub but can be found where the data was taken underneath the data files section.The heart disease dataset was created from that 2020 survey and can be found in this repository's [data](https://github.com/xiaohua-su/Heart_Disease/tree/main/Data) folder.
 
-It is a survey data performed between 2020 to 2021 from the CDC to monitor people's health-behavior, chronic health conditions, and use of services to help manage their disease. The data contains information of the individual such as `race` and `gender` that we did not include in the heart disease dataset to avoid these biases in our models. A new column was created as the data does not specifically have a column called heart disease but instead had two columns called `cvdinfr4` and `cvdcrhd4` that corresponded with whether the individual was ever told/diagnose with having a heart attack and told that they had coronary heart disease respectively. Both questions, get at the issue of heart disease. It is important to note that while both heart attack and coronary artery disease are considered part of heart disease, they are not the only condition in this category. There are other conditions such as congenital heart issues, and rhythm issue that fall under heart disease that are not captured in this dataset.
+It is a survey data performed between 2020 and 2021 from the CDC. This dataset comprised 400,000 responses and had responses from the 50 states plus DC, Puerto Rico and Guam. This survey is used to monitor people's health-behavior, chronic health conditions, and use of services to help manage their disease.The data contains information of the individual such as `race` and `gender` that we did not include in the heart disease dataset to avoid these biases in our models.A new column was created as the data does not specifically have a column called heart disease but instead had two columns called `cvdinfr4` and `cvdcrhd4` that corresponded with whether the individual was ever told/diagnose with having a heart attack and told that they had coronary heart disease respectively.Both questions, get at the issue of heart disease. It is important to note that while both heart attack and coronary artery disease are considered part of heart disease, they are not the only condition in this category. There are other conditions such as congenital heart issues, and rhythm issue that fall under heart disease that are not captured in this dataset.
+
 # Results
+
 
 ![img](./Images/model_comp.png)
 
-This shows how our best model can from our random forest/decision tree both having a
-recall score of about 1 followed by our KNN. Due to the nature of how over fit our random forest and decision were,
-I chose our next best model, which was KNN and evaluated that on the hold out test data.
+On model performance, KNN performed the best at 0.30 recall. The logistic recall was 0.29.
 
 ![img](./Images/confusion_matrix.png)
 
-AS you can see our KNN model is able to predict some individuals correctly as having heart disease.
+The confusion matrix shows better how the KNN model predicted. More than half off of those that had heart disease were misclassified. 
+Still the model was able to classify some with heart disease correctly. Some that don’t have heart disease were misclassified as having heart disease.
 
 The recall of the KNN was 0.30 which also indicated that it's over fit as the training score was 0.64 with an ROC-AUC score of 0.80.
 
 
 
 
-
 # App
- Our best model was deployed in an app. The function development in the [app.py](./app.py) file can be found in the app development notebook. In addition, the code used to make the app on streamlit can be found in the app.py. Unfortunately, due to how big the model file is (2-4 Gb), I was unable to implement my model on the streamlit website, but managed to run it locally. As such, it is not available for others to use. In my GitHub, I have provided the streamlit environment in which I created it. This app can be run locally with the streamlit environment along with running the modeling notebook in order to get the model file into your local computer.
+The app used the logistic regression model because it ran faster and its recall is comparable to the KNN model.
+
+ Our best model was deployed in an app. The function development in the [app.py](./app.py) file can be found in the app development notebook. In addition, the code used to make the app on streamlit can be found in the app.py. Unfortunately, due to how big the model file is (4 Gb), I was unable to implement my model on the streamlit website, but managed to run it locally. As such, it is not available for others to use. In my GitHub, I have provided the streamlit environment in which I created it. This app can be run locally with the streamlit environment along with running the modeling notebook in order to get the model file into your local computer.
 
 # Next Steps
 The next step for this project would be to further refine our target. This projects only looks at heart attack and Coronary Artery Disease. These two conditions are some conditions that fall under the heart disease. Heart disease encompasses other conditions such as high blood pressure, congenital heart disease etc., it's not just CAD and heart attacks as such we would have to refine the questions being asked individual.
@@ -80,7 +87,7 @@ The [environment.yml](./environment.yml) file is the environment that was used t
 <b>Danger:</b> In order to be able to run this notebook successfully, you must have at minimun 32 Gb of RAM or you run the risk of crashing your computer. This notebook was created on a i7-11800H cpu, and 32GB RAM laptop.
 </div>
 
-# Citations/References
+# References
 
 CDC. "*Heart Disease Facts*". CDC. Feb 2022.[Link](https://www.cdc.gov/heartdisease/facts.htm)
 
