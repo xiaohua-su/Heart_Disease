@@ -7,20 +7,14 @@ Author: Xiaohua Su
 [Email](xiaohuasu99@gmail.com) | [Linkedin](http://www.linkedin.com/in/xiaohua-su)
 # Overview
 
-As of 2020, heart disease is the leading cause of death in the US, with the disease claiming close to 700,000 that year.
-It is the leading cause of death regardless of gender and for most race/ethnicity.This disease can lead to early death in individuals, increase medicial visits and a lost of productivity in our economy. As such, it is important to try to address this. My project aims to help build a predictive model for heart disease. By being able to predict whether a patient has heart disease or not, this can be used in hospital to flag doctors to discuss way to manage this disease and prevent early death and potentially slow/mitigate the disease progression.
-
+As of 2020, heart disease is the leading cause of death in the US, with the disease claiming close to 700,000 that year[1]. 
+It is the leading cause of death regardless of gender and for most race/ethnicity[2]. This disease can lead to early death in individuals, increase medical visits and a lost of productivity in our economy. Not only that but 80-90% of this heart disease can be prevented[3]. As such, it is important to try to address this. This project aims to help build a predictive model for heart disease from non-lab work. By being able to predict whether a patient has heart disease or not, this can be used in hospital to flag doctors to discuss way to manage this disease and prevent early death and potentially slow/mitigate the disease progression without having to wait for lab results.
 
 # Problem
 
-With how prevalent heart disease is in the nation, it is important for doctors to discuss with their patients about early prevention. 
-In order to do this, doctors would need to know more about a patient’s history in order to diagnose them with having heart disease, potentially requiring blood work and other lab work in addition. Getting the results from the blood work usually happens after the patient’s is already out of the doctor’s office. Calls will then be made to discuss these results and potential follow-up appointments will be made.
+With how prevalent heart disease is in the nation, it is important for doctors to discuss with their patients about early prevention. In order to do this, doctors would need to know more about a patient’s history in order to diagnose them with having heart disease, potentially requiring blood work and other lab work in addition. Getting the results from the blood work usually happens after the patient’s is already out of the doctor’s office and any discussion would happen later on, delaying early intervention.
 
-Our model aims to predict whether a patient, who comes into a doctor’s office/hospital, has heart disease. 
-By being able to predict if the patient has heart disease or not, we can then flag this patient for the doctor electronically. 
-Instead of having to waiting for a phone call for a discussion on, that may not be between the patient and doctor, conversation between the doctor and patient about managing heart disease can begin.
-This flagging can help start the conversation between the doctor and patient about early prevention steps that can be made and can help lead the doctor in asking certain questions for further verification and testing. 
-By diagnosing it earlier, you can help slow the disease progression, keeping them healthier longer.
+Our model aims to predict whether a patient, who comes into a doctor’s office/hospital, has heart disease. By being able to predict if the patient has heart disease or not, we can then flag this patient for the doctor electronically. Instead of having to waiting for a phone call for a discussion on this, a conversation between the doctor and patient about managing heart disease, early intervention and prevention can begin once they see the doctor that same day. This flagging can help lead the doctor in asking certain questions for further verification and testing. By diagnosing it earlier, you can help slow the disease progression, keeping them healthier longer.
 
 # Data
 The data was taken from the [CDC's 2020 Behavorial Risk Factor Surveillance System](https://www.cdc.gov/brfss/annual_data/annual_2020.html) (BRFSS).Due to how large the data is, this data was not uploaded to the GitHub but can be found where the data was taken underneath the data files section.The heart disease dataset was created from that 2020 survey and can be found in this repository's [data](https://github.com/xiaohua-su/Heart_Disease/tree/main/Data) folder.
@@ -84,15 +78,14 @@ This model can be deployed in an app to be used in a hospital to flag a doctor o
 The [environment.yml](./environment.yml) file is the environment that was used to run this notebook, [EDA notebook](Heart_Disease_EDA.ipynb) and the streamlit app. This notebook requires scipy version 1.5.3 in order to run. When you install the environment into your local, it is possible that scipy updates to a newer version due to streamlit/phik and will need to downgrade it in order for sklearn to operate properly. If you have a MAC unfortunately you'll need to figure out what MAC specific dependencies will be required.
 
 <div class="alert alert-block alert-danger">
-<b>Danger:</b> In order to be able to run this notebook successfully, you must have at minimun 32 Gb of RAM or you run the risk of crashing your computer. This notebook was created on a i7-11800H cpu, and 32GB RAM laptop.
+<b>Danger:</b> In order to be able to run this notebook successfully, you must have at minimum 32 Gb of RAM or you run the risk of crashing your computer. This notebook was created on a i7-11800H cpu, and 32GB RAM laptop.
 </div>
 
 # References
 
-CDC. "*Heart Disease Facts*". CDC. Feb 2022.[Link](https://www.cdc.gov/heartdisease/facts.htm)
+[1] CDC. "*Heart Disease Facts*". CDC. Feb 2022.[Link](https://www.cdc.gov/heartdisease/facts.htm)
 
-CDC. "*About Heart Disease*". CDC. Sept 2021. [Link](https://www.cdc.gov/heartdisease/about.htm)
+[2] CDC. "*About Heart Disease*". CDC. Sept 2021. [Link](https://www.cdc.gov/heartdisease/about.htm)
 
-AHA. "*CDC Prevention Programs*". AHA. May 2018. [Link](https://www.heart.org/en/get-involved/advocate/federal-priorities/cdc-prevention-programs)
-
+[3] AHA. "*CDC Prevention Programs*". AHA. May 2018. [Link](https://www.heart.org/en/get-involved/advocate/federal-priorities/cdc-prevention-programs)
 
