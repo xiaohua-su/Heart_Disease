@@ -39,9 +39,12 @@ The recall of the KNN was 0.30 which also indicated that it's over fit as the tr
 
 
 # App
+
+**This app would be implemented in a health care system and should not be used as a final diagnosis of any kind, nor should anyone who download this be using it as a self diagnosis**
+
 The app used the logistic regression model because it ran faster and its recall is comparable to the KNN model.
 
- Our best model was deployed in an app. The function development in the [app.py](./app.py) file can be found in the app development notebook. In addition, the code used to make the app on streamlit can be found in the app.py. Unfortunately, due to how big the model file is (4 Gb), I was unable to implement my model on the streamlit website, but managed to run it locally. As such, it is not available for others to use. In my GitHub, I have provided the streamlit environment in which I created it. This app can be run locally with the streamlit environment along with running the modeling notebook in order to get the model file into your local computer.
+ Our second best model was deployed in an app. The function development in the [app.py](./app.py) file can be found in the app development notebook. In addition, the code used to make the app on streamlit can be found in the app.py. Unfortunately, due to how big the model file is (4 Gb), I was unable to implement my model on the streamlit website, but managed to run it locally. As such, it is not available for others to use on an website. In my GitHub, I have provided the streamlit environment in which I created it. This app can be run locally with the streamlit environment along with running the modeling notebook in order to get the model file into your local computer.
 
 # Next Steps
 The next step for this project would be to further refine our target. This projects only looks at heart attack and Coronary Artery Disease. These two conditions are some conditions that fall under the heart disease. Heart disease encompasses other conditions such as high blood pressure, congenital heart disease etc., it's not just CAD and heart attacks as such we would have to refine the questions being asked individual.
