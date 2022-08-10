@@ -84,6 +84,10 @@ The [environment.yml](./environment.yml) file is the environment that was used t
 <b>Danger:</b> In order to be able to run this notebook successfully, you must have at minimum 32 Gb of RAM or you run the risk of crashing your computer. This notebook was created on a i7-11800H cpu, and 32GB RAM laptop.
 </div>
 
+# Others
+
+A tableau dashboard was created to analyze data. It can be found [here](https://public.tableau.com/app/profile/xiaohua.su/viz/CDCBRFSS-HeartDisease/CDCBFRSS-HeartDisease)
+
 # References
 
 [1] CDC. "*Heart Disease Facts*". CDC. Feb 2022.[Link](https://www.cdc.gov/heartdisease/facts.htm)
